@@ -1,0 +1,86 @@
+           STRING MANIPULATION
+
+Page -- 35
+
+# Quoatation Manipulation 
+--- In python this means adding, changing, removing or formatting text inside the quotes (string) using python code.
+
+In the 6th line of the code , the first letter of every word in the string is going to be capitalise..
+
+While using the replace() method , we pass the arguments first is the old word and second one is new word which you want to replace inplace of the older one and -- you can also pass a third argument (an integer) where you can tell or decide how many times you have to replace that word .
+
+
+-------------------------------------------------------------------
+
+
+!Question--1.
+What if i want to replace string from end , at middle and from a specific position .
+!Ans--1
+1. Replace from the end (right side)
+
+Use rsplit() + join()
+
+Example: Replace from end
+text = "one two two two"
+
+# Replace last "two" with "three"
+parts = text.rsplit("two", 1)
+text = "three".join(parts)
+
+print(text)
+
+rsplit -- reverse split -- breaks string from right to left and the second argumnet (integer) will tell, from where to split string like in this code it will be like ['one two two' , 'two'].
+join() connects list into a string using "three" in between.
+
+$ Q---a. so instead of join i can't use append hmm ? what is the difference.
+$ ans--a. append() → adds item to end of list
+join() → joins list into string by putting a string between list elements
+
+
+-------------------------------------------------------------------
+
+
+2. Replace from the middle
+
+Use slicing + replace
+
+Example:
+
+Replace only in middle part:
+
+text = "apple banana mango banana apple"
+
+# Suppose we want to replace only middle banana
+middle = text[6:24]          # take middle part
+middle = middle.replace("banana", "orange", 1)
+
+text = text[:6] + middle + text[24:]
+
+print(text)
+
+
+-------------------------------------------------------------------
+
+
+3. Replace at a specific position (best method)
+
+Use find() and string slicing
+
+Example:
+text = "one two two two"
+
+index = text.rfind("two")   # find from right
+text = text[:index] + "three" + text[index+3:]
+
+print(text)
+
+ans---
+find method is used to find index of the item. we pass the item as an argument insidde parenthesis and it return it index and if not found then it will return -1.
+There is an another which is used to find positions of items which is index method.(index()).
+
+3. Important Difference
+Data Type	Method to find position
+String	find()
+String	rfind()
+List	index()
+Tuple	index()

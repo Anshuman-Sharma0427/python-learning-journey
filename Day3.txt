@@ -1,0 +1,28 @@
+                    USING RIGHT TYPES
+Pg - 38
+.. When a program produces unintended results but doesn't crash , it has a logical error.
+
+.. the input function returns a string when used like this-------
+car = input()
+rent = input()
+total = car+rentprint(total)
+
+## car - 100000 , rent - 24434
+# output will be like this 10000024434
+
+because it is treating all the input as string and in the total variable it concatenating the strings , so yeah it is simple.
+
+.. input() and int() are nested. Nested function calls means puttingone inside other
+
+** Experinced programmers also use the initial comments are to describe any modifications they make to code very time.
+
+
+
+
+
+
+
+
+
+
+
