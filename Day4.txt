@@ -1,0 +1,66 @@
+              ** Generating Random Numbers
+pg-50
+ 
+.. Python generates random numbers based on formula ,so they are not truly random. This kind of generation is called pseudorandom.
+#------------------------------------------------------------------
+
+** Craps Roller Program
+
+import random
+
+#generates random numbers from 1 to 6
+die_1 = random.randint(1,6)
+die_2 = random.randrange(6)+1
+total = die_1 + die_2
+
+#------------------------------------------------------------------
+
+.. The first line of code statements allows you to import , or load , modules.
+## Modules are files that contain code meant to be used in other program 
+Think that your program is a construction project, then oules are like special tools that you can pull out whenever you need.
+
+#------------------------------------------------------------------
+
+## This random module contains a function, randint() -- which produce random integer.
+
+#------------------------------------------------------------------
+
+## You see that you are not calling function as usual as you do but calling by giving it the module name. this method of access is called Dotnotation.
+
+#------------------------------------------------------------------
+
+## random.randint() ---- means the function randint() belongs to module random.
+
+.. this randint function will have only two integers argument values ,  not more than this. And will return a numbers between those two numbers or the argument value itself.
+
+#------------------------------------------------------------------
+
+## This module also contain randrange function which also do the same work.
+
+.. There are several ways to call this function , but the simplest is to use a single , +ve , integer argument.
+random.randrange(6)  --- o to 5 included but 6 will not that's why we write +1 after this function so 6 will also get included but you can also write 7 direct as an argument in the function.
+
+.. this word "several ways" means we can pass 1 argument , 2 argument ( one integer argument value will be included but the 2nd will not) , and 3 arguments(the 3rd argument will denote the jumps like (0,10,2)---- output -----0,2,4,6,8 ).
+
+** you'll want to pick the function that best fits your needs.
+
+#------------------------------------------------------------------
+
+## Branching -- basically means making a decision to take one path or another.
+.. A condition is just an expression that is either true or false.
+(expression means a piece of code that python can evaluate to produce a value)
+
+.. Conditions are often created by comparing values.
+Using comparison operator you can compare things which are of same data type. But you can also compare integer to float.
+Also we can compare strings and the results are based on the alphabetical order.
+First compare the first letter of the string and if they are same then 2nd and if they same too and it will go for 3rd and so on.
+
+#------------------------------------------------------------------
+
+** Using Indentation to create Blocks.....
+
+## By indenting the line , it becomes a block.
+
+.. A block is one or more consecutive lines indented by the same amount. indenting sets lines off , not only visually , but logically too.
+
+
